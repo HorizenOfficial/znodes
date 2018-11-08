@@ -22,7 +22,7 @@ protocol_version = 170002
 # crawler. This is so that users will not confuse your crawler with another
 # instance that is already running and generating data for the project.
 # -----------------------------------------------------------------------------
-user_agent = /bitnodes.21.co:0.1/
+user_agent = /hnodes:0.2/
 
 # Services to use for outgoing network address message
 services = 0
@@ -38,7 +38,7 @@ cron_delay = 10
 
 # Limit max. nodes per IPv6 network prefix
 ipv6_prefix = 64
-nodes_per_ipv6_prefix = 1
+nodes_per_ipv6_prefix = 100
 
 # Redis TTL for cached RTT
 ttl = 10800
@@ -51,3 +51,11 @@ tor_proxy = 127.0.0.1:9050
 
 # Relative path to directory containing timestamp-prefixed JSON crawl files
 crawl_dir = data/crawl/mainnet
+
+#Attempt to establish standard connection when TLS fails
+non_tls_connections = True
+
+#TLS certificate
+cert_path = cert/cert.pem
+key_path = cert/key.pem
+key_pass =

@@ -1,4 +1,4 @@
-*.conf
+/*.conf
 *.log
 *.out
 *.pyc
@@ -8,4 +8,8 @@
 /tests/
 clean.sh
 geoip/*.dat
+geoip/*.mmdb
+geoip/*.lock
 rsync.sh
+/venv/
+cert/*.pem

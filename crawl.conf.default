@@ -13,8 +13,8 @@ seeders =
     node1.zenchain.info
     dnsseed.zenseed.network
 # --- testnet3 ---
-seeders =
-    node.scottrockcafe.com
+#seeders =
+#    node.scottrockcafe.com
 
 
 # Number of concurrent workers (greenlets)
@@ -36,7 +36,7 @@ protocol_version = 170002
 # crawler. This is so that users will not confuse your crawler with another
 # instance that is already running and generating data for the project.
 # -----------------------------------------------------------------------------
-user_agent = /znodes:0.1/
+user_agent = /hnodes:0.2/
 
 # Services to use for outgoing network address message
 services = 0
@@ -61,7 +61,7 @@ ipv6 = True
 
 # Limit max. nodes per IPv6 network prefix
 ipv6_prefix = 64
-nodes_per_ipv6_prefix = 1
+nodes_per_ipv6_prefix = 100
 
 # List of excluded IPv4 networks
 exclude_ipv4_networks =
@@ -95,7 +95,7 @@ exclude_ipv6_networks =
 exclude_ipv4_bogons = True
 
 # Attempt to establish connection with .onion nodes
-onion = False
+onion = True
 
 # Tor proxy is required to connect to .onion address
 tor_proxy =  127.0.0.1:9050
@@ -111,3 +111,17 @@ include_checked = False
 crawl_dir = data/crawl/mainnet
 # --- testnet3 ---
 #crawl_dir = data/crawl/testnet3
+
+#Attempt to establish standard connection when TLS fails
+non_tls_connections = True
+
+#TLS certificate
+cert_path = cert/cert.pem
+key_path = cert/key.pem
+key_pass =
+
+# Enable node map dump.
+node_map_dump = False
+
+# How many of the most recent known peers should be kept as probable peers
+node_peers_max_count = 125
